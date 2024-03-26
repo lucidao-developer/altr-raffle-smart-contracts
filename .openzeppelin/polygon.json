@@ -1,0 +1,287 @@
+{
+  "manifestVersion": "3.2",
+  "proxies": [
+    {
+      "address": "0x802d41E2ad333Ac9377f25E27EE68B7381314Caa",
+      "txHash": "0x8a16799ed099531e3847ff857224a82c5bd290ef23808b96f8c8678ea5e58503",
+      "kind": "transparent"
+    }
+  ],
+  "impls": {
+    "4d7467069d6aba30f2fd136cf13d36a4179ec55b2dc8b002dd7a02bcddb02100": {
+      "address": "0xd976D64f4E6101488Ba3D1Ba6e92782eCBc8a402",
+      "txHash": "0x5d1435a2dabc633441c16bdb4081e3e27371fdb4b955bf5bc6279e8f313570ef",
+      "layout": {
+        "solcVersion": "0.8.24",
+        "storage": [
+          {
+            "label": "vrfV2Wrapper",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_address",
+            "contract": "RaffleManager",
+            "src": "contracts/RaffleManager.sol:34"
+          },
+          {
+            "label": "lastRaffleId",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_uint256",
+            "contract": "RaffleManager",
+            "src": "contracts/RaffleManager.sol:37"
+          },
+          {
+            "label": "version",
+            "offset": 0,
+            "slot": "2",
+            "type": "t_bytes1",
+            "contract": "RaffleManager",
+            "src": "contracts/RaffleManager.sol:40"
+          },
+          {
+            "label": "knownRaffles",
+            "offset": 0,
+            "slot": "3",
+            "type": "t_mapping(t_address,t_bool)",
+            "contract": "RaffleManager",
+            "src": "contracts/RaffleManager.sol:43"
+          },
+          {
+            "label": "raffles",
+            "offset": 0,
+            "slot": "4",
+            "type": "t_mapping(t_uint256,t_struct(Raffle)10540_storage)",
+            "contract": "RaffleManager",
+            "src": "contracts/RaffleManager.sol:46"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_struct(InitializableStorage)1264_storage": {
+            "label": "struct Initializable.InitializableStorage",
+            "members": [
+              {
+                "label": "_initialized",
+                "type": "t_uint64",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "_initializing",
+                "type": "t_bool",
+                "offset": 8,
+                "slot": "0"
+              }
+            ],
+            "numberOfBytes": "32"
+          },
+          "t_struct(Ownable2StepStorage)1171_storage": {
+            "label": "struct Ownable2StepUpgradeable.Ownable2StepStorage",
+            "members": [
+              {
+                "label": "_pendingOwner",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "0"
+              }
+            ],
+            "numberOfBytes": "32"
+          },
+          "t_struct(OwnableStorage)1213_storage": {
+            "label": "struct OwnableUpgradeable.OwnableStorage",
+            "members": [
+              {
+                "label": "_owner",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "0"
+              }
+            ],
+            "numberOfBytes": "32"
+          },
+          "t_uint64": {
+            "label": "uint64",
+            "numberOfBytes": "8"
+          },
+          "t_bytes1": {
+            "label": "bytes1",
+            "numberOfBytes": "1"
+          },
+          "t_bytes32": {
+            "label": "bytes32",
+            "numberOfBytes": "32"
+          },
+          "t_contract(RaffleRewarder)11476": {
+            "label": "contract RaffleRewarder",
+            "numberOfBytes": "20"
+          },
+          "t_contract(RaffleTicketPurchase)11997": {
+            "label": "contract RaffleTicketPurchase",
+            "numberOfBytes": "20"
+          },
+          "t_mapping(t_address,t_bool)": {
+            "label": "mapping(address => bool)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_struct(Raffle)10540_storage)": {
+            "label": "mapping(uint256 => struct RaffleManager.Raffle)",
+            "numberOfBytes": "32"
+          },
+          "t_struct(Prize)11021_storage": {
+            "label": "struct RaffleRewarder.Prize",
+            "members": [
+              {
+                "label": "contractAddress",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "tokenId",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "1"
+              }
+            ],
+            "numberOfBytes": "64"
+          },
+          "t_struct(Raffle)10540_storage": {
+            "label": "struct RaffleManager.Raffle",
+            "members": [
+              {
+                "label": "raffleTicketPurchase",
+                "type": "t_contract(RaffleTicketPurchase)11997",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "raffleRewarder",
+                "type": "t_contract(RaffleRewarder)11476",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "purchaseToken",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "ticketPrice",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "3"
+              },
+              {
+                "label": "startTimestamp",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "4"
+              },
+              {
+                "label": "finishTimestamp",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "5"
+              },
+              {
+                "label": "minCap",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "6"
+              },
+              {
+                "label": "maxCap",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "7"
+              },
+              {
+                "label": "personalMaxCap",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "8"
+              },
+              {
+                "label": "prize",
+                "type": "t_struct(Prize)11021_storage",
+                "offset": 0,
+                "slot": "9"
+              },
+              {
+                "label": "participantsProof",
+                "type": "t_bytes32",
+                "offset": 0,
+                "slot": "11"
+              },
+              {
+                "label": "winner",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "12"
+              },
+              {
+                "label": "version",
+                "type": "t_bytes1",
+                "offset": 20,
+                "slot": "12"
+              }
+            ],
+            "numberOfBytes": "416"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          }
+        },
+        "namespaces": {
+          "erc7201:openzeppelin.storage.Ownable2Step": [
+            {
+              "contract": "Ownable2StepUpgradeable",
+              "label": "_pendingOwner",
+              "type": "t_address",
+              "src": "@openzeppelin/contracts-v5-upgradeable/access/Ownable2StepUpgradeable.sol:23",
+              "offset": 0,
+              "slot": "0"
+            }
+          ],
+          "erc7201:openzeppelin.storage.Ownable": [
+            {
+              "contract": "OwnableUpgradeable",
+              "label": "_owner",
+              "type": "t_address",
+              "src": "@openzeppelin/contracts-v5-upgradeable/access/OwnableUpgradeable.sol:24",
+              "offset": 0,
+              "slot": "0"
+            }
+          ],
+          "erc7201:openzeppelin.storage.Initializable": [
+            {
+              "contract": "Initializable",
+              "label": "_initialized",
+              "type": "t_uint64",
+              "src": "@openzeppelin/contracts-v5-upgradeable/proxy/utils/Initializable.sol:69",
+              "offset": 0,
+              "slot": "0"
+            },
+            {
+              "contract": "Initializable",
+              "label": "_initializing",
+              "type": "t_bool",
+              "src": "@openzeppelin/contracts-v5-upgradeable/proxy/utils/Initializable.sol:73",
+              "offset": 8,
+              "slot": "0"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "extends": "solhint:recommended",
+  "rules": {
+    "compiler-version": [
+      "error",
+      "^0.8.0"
+    ],
+    "func-visibility": [
+      "warn",
+      {
+        "ignoreConstructors": true
+      }
+    ],
+    "ordering": "warn",
+    "no-empty-blocks": "off",
+    "not-rely-on-time": "off",
+    "reason-string": "warn",
+    "immutable-vars-naming": "off"
+  },
+  "plugins": [
+    "prettier"
+  ]
+}
